@@ -4,101 +4,311 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Houston's First Brand Kit</title>
+<meta name="description" content="The single source of truth for the Houston's First Baptist Church brand; machine-readable for AI agents, browsable for humans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Gentium+Book+Plus&family=Barlow+Condensed:wght@200&display=swap" rel="stylesheet">
 <style>
   :root{
-    --slate:#1A303A;--navy:#00365B;--sky:#40A2D8;--gray:#EDEEEF;
-    --apricot:#FE7A36;--kelly:#4CB963;
+    --slate:#1A303A;--slate-75:#53636B;--slate-50:#8D979D;--slate-25:#C6CBCD;
+    --navy:#00365B;--navy-75:#406884;--navy-50:#809BAD;--navy-25:#C0CCD6;
+    --sky:#40A2D8;--sky-75:#70B9E2;--sky-50:#A0D0EC;--sky-25:#CFE8F6;
+    --apricot:#FE7A36;--kelly:#4CB963;--gray:#EDEEEF;--gray-25:#FBFBFB;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;font-weight:300;color:var(--slate);background:#fff;line-height:1.6}
-  header{background:var(--navy);color:#fff;padding:64px 24px;text-align:center}
-  header h1{font-weight:300;font-size:2.4rem;letter-spacing:.02em}
-  header p{opacity:.8;margin-top:8px}
-  .micro{font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;color:var(--sky)}
-  main{max-width:960px;margin:0 auto;padding:48px 24px}
-  section{margin-bottom:56px}
-  h2{font-weight:300;font-size:1.8rem;color:var(--navy);margin:8px 0 16px}
-  table{width:100%;border-collapse:collapse;margin-top:12px}
-  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--gray)}
-  th{font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#53636B}
-  code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:.9em}
-  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin-top:16px}
-  .swatch{border:1px solid var(--gray);border-radius:8px;overflow:hidden}
-  .swatch .chip{height:80px}
-  .swatch .meta{padding:10px 12px;font-size:.85rem}
-  .swatch .meta strong{display:block;font-weight:600}
-  .tints{display:flex;height:14px}
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;font-weight:300;color:var(--slate);background:#fff;line-height:1.7;font-size:15px}
+  .micro{font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:.7rem;color:var(--sky)}
+  h2{font-weight:200;font-size:2rem;color:var(--navy);margin:10px 0 4px}
+  .lede{font-family:'Gentium Book Plus',serif;color:var(--slate-75);font-size:1.02rem;max-width:640px;margin-bottom:34px}
+  code{background:var(--gray);padding:2px 7px;border-radius:3px;font-size:.86em}
+  a{color:var(--navy);text-decoration:underline;text-decoration-color:var(--sky);text-underline-offset:3px}
+  a:hover{color:var(--sky)}
+
+  nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--gray);z-index:10;display:flex;gap:26px;align-items:baseline;padding:18px 40px;flex-wrap:wrap}
+  nav .brand{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--navy);margin-right:auto}
+  nav a{font-size:.72rem;font-weight:400;text-transform:uppercase;letter-spacing:.14em;color:var(--slate-75);text-decoration:none}
+  nav a:hover{color:var(--navy)}
+
+  header{background:var(--navy);color:#fff;padding:110px 40px}
+  .measure{max-width:1000px;margin:0 auto}
+  header h1{font-weight:200;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;margin:18px 0 20px;max-width:720px}
+  header p{color:var(--navy-25);font-family:'Gentium Book Plus',serif;font-size:1.05rem;max-width:540px;margin-bottom:44px}
+  .hero-links{display:flex;gap:36px;flex-wrap:wrap}
+  .hero-links a{color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--sky);padding-bottom:6px}
+  .hero-links a:hover{color:var(--sky-50);border-color:var(--sky-50)}
+
+  main{padding:0 40px}
+  section{max-width:1000px;margin:0 auto;padding:88px 0;border-bottom:1px solid var(--gray)}
+  section:last-of-type{border-bottom:none}
+  .num{font-weight:200;font-size:.85rem;color:var(--slate-50);letter-spacing:.1em;margin-bottom:14px}
+
+  table{width:100%;border-collapse:collapse;margin-top:26px;font-size:.9rem}
+  th,td{text-align:left;padding:13px 16px 13px 0;border-bottom:1px solid var(--gray);vertical-align:top}
+  th{font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--slate-75)}
+
+  ol.plain{counter-reset:item;list-style:none;margin-top:26px}
+  ol.plain li{counter-increment:item;padding:16px 0;border-bottom:1px solid var(--gray);display:grid;grid-template-columns:56px 1fr;gap:0}
+  ol.plain li::before{content:counter(item,decimal-leading-zero);font-weight:200;color:var(--slate-50);font-size:.85rem;padding-top:2px}
+
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1px;background:var(--gray);border:1px solid var(--gray);margin-top:26px}
+  .swatch{background:#fff}
+  .swatch .chip{height:110px}
+  .tints{display:flex;height:20px}
   .tints span{flex:1}
-  a{color:var(--sky);text-decoration:none;font-weight:600}
-  a:hover{text-decoration:underline}
-  .agent{background:var(--gray);border-left:4px solid var(--sky);padding:20px 24px;border-radius:0 8px 8px 0}
-  .agent ol{margin-left:20px;margin-top:8px}
-  footer{background:var(--slate);color:#fff;text-align:center;padding:32px 24px;font-size:.85rem}
-  footer a{color:#A0D0EC}
+  .swatch .meta{padding:14px 14px 16px;font-size:.78rem;color:var(--slate-75);line-height:1.5}
+  .swatch .meta strong{display:block;font-weight:600;color:var(--slate);font-size:.92rem;margin-bottom:2px}
+
+  .season-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--gray);border:1px solid var(--gray);margin-top:26px}
+  .season{background:#fff;padding:20px 18px}
+  .season .bar{height:4px;margin-bottom:14px}
+  .season strong{display:block;font-weight:600;font-size:.9rem}
+  .season small{color:var(--slate-75)}
+
+  .specimen{border-top:1px solid var(--slate);margin-top:26px;padding-top:34px}
+  .specimen .micro{margin-bottom:8px}
+  .specimen .h{font-weight:200;font-size:2.5rem;color:var(--navy);line-height:1.2}
+  .specimen .s{font-family:'Gentium Book Plus',serif;font-size:1.25rem;color:var(--slate-75);margin:10px 0}
+  .specimen .b{max-width:580px;margin-bottom:16px}
+  .specimen .c{font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+  .specimen .cond{font-family:'Barlow Condensed',sans-serif;font-weight:200;font-size:1.15rem;color:var(--slate-75);margin-top:18px}
+
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;margin-top:26px}
+  .cols h3{font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--slate);border-bottom:1px solid var(--slate);padding-bottom:10px;margin-bottom:4px}
+  .cols ul{list-style:none}
+  .cols li{padding:12px 0;border-bottom:1px solid var(--gray);font-size:.92rem}
+
+  footer{background:var(--slate);color:var(--slate-25);padding:56px 40px;font-size:.82rem;line-height:2}
+  footer a{color:#fff;text-decoration-color:var(--sky)}
+  footer .measure{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  @media (max-width:700px){nav,header,main,footer{padding-left:22px;padding-right:22px}}
 </style>
 </head>
 <body>
+
+<nav>
+  <span class="brand">Houston's First Brand Kit</span>
+  <a href="#agents">Agents</a>
+  <a href="#files">Files</a>
+  <a href="#schema">Schema</a>
+  <a href="#colors">Color</a>
+  <a href="#type">Type</a>
+  <a href="#logo">Logo</a>
+  <a href="#voice">Voice</a>
+  <a href="#style">Style</a>
+  <a href="#checklist">Checklist</a>
+</nav>
+
 <header>
-  <div class="micro">Brand Kit</div>
-  <h1>Houston's First Baptist Church</h1>
-  <p>The single source of truth for our brand; for people and for AI agents.</p>
+  <div class="measure">
+    <div class="micro">Brand Kit</div>
+    <h1>Houston's First<br>Baptist Church</h1>
+    <p>One source of truth for our brand. Structured for AI agents, browsable for people, maintained by Communications.</p>
+    <div class="hero-links">
+      <a href="brand-kit.json">brand-kit.json</a>
+      <a href="guidelines.md">Guidelines</a>
+      <a href="https://github.com/YesuCS/Houstons-First-Brand">GitHub</a>
+      <a href="https://github.com/YesuCS/Houstons-First-Brand/archive/refs/heads/main.zip">Download ZIP</a>
+    </div>
+  </div>
 </header>
+
 <main>
-  <section>
-    <div class="micro">For AI Systems</div>
-    <h2>Agent Instructions</h2>
-    <div class="agent">
-      <ol>
-        <li>Start with <a href="brand-kit.json"><code>brand-kit.json</code></a>; it is canonical and machine-readable.</li>
-        <li>Primary color is Navy <code>#00365B</code>; primary typeface is Gibson (free alternative: Montserrat).</li>
-        <li>The logo is black or white only; never recolor it.</li>
-        <li>On the HoustonsFirstV1 web theme, use theme classes; never hard-code hex in markup.</li>
-        <li>Run the <code>checklist</code> array in <code>brand-kit.json</code> before finalizing any asset.</li>
-      </ol>
+
+<section id="agents">
+  <div class="num">01</div>
+  <div class="micro">For AI Systems</div>
+  <h2>Agent Instructions</h2>
+  <p class="lede">Generating or reviewing anything for Houston's First begins here.</p>
+  <ol class="plain">
+    <li><span>Load <a href="brand-kit.json"><code>brand-kit.json</code></a>. It is canonical and machine-readable; everything on this page is generated from it.</span></li>
+    <li><span>Prioritize Navy <code>#00365B</code> as the primary brand color, Gibson as the primary typeface (free alternative: Montserrat), and the five brand traits: Generous, Vibrant, Relational, Attentive, Genuine.</span></li>
+    <li><span>The logo is black or white only. Never recolor, restyle, or apply effects to it.</span></li>
+    <li><span>On the HoustonsFirstV1 Rock theme, author with theme classes such as <code>text-navy</code>, <code>bg-slate</code>, and <code>btn-sky</code>. Never hard-code hex values in page markup.</span></li>
+    <li><span>Format every name, date, and time per the <code>communicationsStyle</code> object: "Mon, June 17 @ 9a", "713.681.8000", never "HFBC".</span></li>
+    <li><span>Before finalizing, run every item in the <code>checklist</code> array.</span></li>
+  </ol>
+</section>
+
+<section id="files">
+  <div class="num">02</div>
+  <div class="micro">Repository</div>
+  <h2>Key Files</h2>
+  <p class="lede">Everything ships in the repository. Clone it or download the ZIP.</p>
+  <table>
+    <tr><th>File</th><th>Purpose</th></tr>
+    <tr><td><a href="brand-kit.json">brand-kit.json</a></td><td>Machine-readable brand data; colors, typography, logo rules, voice, communications style, campuses, checklist</td></tr>
+    <tr><td><a href="guidelines.md">guidelines.md</a></td><td>Human-readable brand guidelines</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos">assets/logos</a></td><td>Logo files; all lockups, black and white, campus variants</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/fonts">assets/fonts</a></td><td>Font licensing links and free alternatives</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/embellishments">assets/embellishments</a></td><td>Approved decorative and graphic elements</td></tr>
+  </table>
+</section>
+
+<section id="schema">
+  <div class="num">03</div>
+  <div class="micro">Structure</div>
+  <h2>JSON Schema</h2>
+  <p class="lede">Top-level keys in <code>brand-kit.json</code> and what they hold.</p>
+  <table>
+    <tr><th>Key</th><th>Contents</th></tr>
+    <tr><td><code>brand</code></td><td>Name, mission, vision, strategy, and the five brand traits with taglines</td></tr>
+    <tr><td><code>colors</code></td><td>Core and accent palettes with hex, PMS, 75/50/25 tints, usage rules, and the seasonal accent map</td></tr>
+    <tr><td><code>typography</code></td><td>Primary typefaces, roles, free alternatives, and the five-level hierarchy</td></tr>
+    <tr><td><code>logo</code></td><td>Elements, lockups, color variations, prohibited treatments, clearspace, and minimum sizes</td></tr>
+    <tr><td><code>campuses</code></td><td>Official campus names and addresses</td></tr>
+    <tr><td><code>voice</code></td><td>Voice summary with do and don't lists</td></tr>
+    <tr><td><code>communicationsStyle</code></td><td>Church name usage, contact formats, date and time rules, divine terms, dashes, ministry names</td></tr>
+    <tr><td><code>checklist</code></td><td>Final pre-publish verification, one item per rule</td></tr>
+  </table>
+</section>
+
+<section id="colors">
+  <div class="num">04</div>
+  <div class="micro">Palette</div>
+  <h2>Color</h2>
+  <p class="lede">Core colors carry the brand; accents highlight, matched to season. Each color includes 75, 50, and 25 percent tints.</p>
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:var(--slate)"></div><div class="tints"><span style="background:var(--slate-75)"></span><span style="background:var(--slate-50)"></span><span style="background:var(--slate-25)"></span></div><div class="meta"><strong>Slate</strong>#1A303A · PMS 7546 C<br>Core. Dark backgrounds, body copy</div></div>
+    <div class="swatch"><div class="chip" style="background:var(--navy)"></div><div class="tints"><span style="background:var(--navy-75)"></span><span style="background:var(--navy-50)"></span><span style="background:var(--navy-25)"></span></div><div class="meta"><strong>Navy</strong>#00365B · PMS 540 C<br>Core. Headlines, primary color</div></div>
+    <div class="swatch"><div class="chip" style="background:var(--sky)"></div><div class="tints"><span style="background:var(--sky-75)"></span><span style="background:var(--sky-50)"></span><span style="background:var(--sky-25)"></span></div><div class="meta"><strong>Sky</strong>#40A2D8 · PMS 298 C<br>Core. Microtitles, calls-to-action</div></div>
+    <div class="swatch"><div class="chip" style="background:var(--gray)"></div><div class="tints"><span style="background:var(--gray-25)"></span></div><div class="meta"><strong>Gray</strong>#EDEEEF · PMS 539 C<br>Core. Light backgrounds</div></div>
+    <div class="swatch"><div class="chip" style="background:var(--apricot)"></div><div class="tints"><span style="background:#FE9C69"></span><span style="background:#FEBC9B"></span><span style="background:#FEDECD"></span></div><div class="meta"><strong>Apricot</strong>#FE7A36 · PMS 164 C<br>Accent. Seasonal, secondary CTA</div></div>
+    <div class="swatch"><div class="chip" style="background:var(--kelly)"></div><div class="tints"><span style="background:#79CA8A"></span><span style="background:#A6DCB1"></span><span style="background:#D2EED8"></span></div><div class="meta"><strong>Kelly</strong>#4CB963 · PMS 7479 C<br>Accent. Seasonal</div></div>
+  </div>
+  <div class="season-row">
+    <div class="season"><div class="bar" style="background:var(--sky)"></div><strong>Winter</strong><small>Sky accent</small></div>
+    <div class="season"><div class="bar" style="background:var(--kelly)"></div><strong>Spring</strong><small>Kelly accent</small></div>
+    <div class="season"><div class="bar" style="background:var(--navy)"></div><strong>Summer</strong><small>Core colors only</small></div>
+    <div class="season"><div class="bar" style="background:var(--apricot)"></div><strong>Fall</strong><small>Apricot accent</small></div>
+  </div>
+</section>
+
+<section id="type">
+  <div class="num">05</div>
+  <div class="micro">Typography</div>
+  <h2>Type System</h2>
+  <p class="lede">Gibson leads; Tisa Pro warms the subheadings. This page renders the free Google alternatives.</p>
+  <div class="specimen">
+    <div class="micro">Microtitle · Gibson Semibold</div>
+    <div class="h">Headline in Gibson Light</div>
+    <div class="s">Subheading set in Tisa Pro Regular</div>
+    <p class="b">Body copy in Gibson Light. Switch to Gibson Book when legibility needs a boost, such as small sizes or long-form reading.</p>
+    <div class="c">Call to Action · Gibson Semibold</div>
+    <p class="cond">Futura PT Condensed Book carries dense copy in tight spaces, such as event flyer detail blocks.</p>
+  </div>
+  <table>
+    <tr><th>Role</th><th>Adobe (licensed)</th><th>Google (free)</th></tr>
+    <tr><td>Microtitles, CTAs, headlines, body</td><td>Gibson</td><td>Montserrat Extra Light</td></tr>
+    <tr><td>Subheadings</td><td>Tisa Pro</td><td>Gentium Book Plus</td></tr>
+    <tr><td>Dense or condensed copy</td><td>Futura PT Condensed</td><td>Barlow Condensed Thin</td></tr>
+  </table>
+</section>
+
+<section id="logo">
+  <div class="num">06</div>
+  <div class="micro">Identity</div>
+  <h2>Logo</h2>
+  <p class="lede">A cross in three concentric circles: Relevant, Biblical, Community, lived out through Gather, Grow, Give. Official files live in <a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos">assets/logos</a>.</p>
+  <div class="cols">
+    <div>
+      <h3>Lockups</h3>
+      <ul>
+        <li><strong>Primary</strong> (horizontal) is the default for web headers and most applications</li>
+        <li><strong>Stacked</strong> for portrait layouts, brochures, and compact spaces</li>
+        <li><strong>Logomark only</strong> for app icons and merchandise; on print, the full church name must appear on the piece</li>
+        <li>Clearspace equals half the logomark's height on all sides; minimum sizes are 0.3 in (primary) and 0.75 in (stacked)</li>
+      </ul>
     </div>
-  </section>
-
-  <section>
-    <div class="micro">Downloads</div>
-    <h2>Key Files</h2>
-    <table>
-      <tr><th>File</th><th>Purpose</th></tr>
-      <tr><td><a href="brand-kit.json">brand-kit.json</a></td><td>Machine-readable brand data</td></tr>
-      <tr><td><a href="guidelines.md">guidelines.md</a></td><td>Human-readable brand guidelines</td></tr>
-      <tr><td><a href="assets/logos/">assets/logos/</a></td><td>Logo files (all lockups, black + white)</td></tr>
-      <tr><td><a href="assets/fonts/">assets/fonts/</a></td><td>Font references and free alternatives</td></tr>
-      <tr><td><a href="assets/embellishments/">assets/embellishments/</a></td><td>Approved graphic elements</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <div class="micro">Palette</div>
-    <h2>Brand Colors</h2>
-    <div class="swatches">
-      <div class="swatch"><div class="chip" style="background:#1A303A"></div><div class="tints"><span style="background:#53636B"></span><span style="background:#8D979D"></span><span style="background:#C6CBCD"></span></div><div class="meta"><strong>Slate</strong>#1A303A · Core</div></div>
-      <div class="swatch"><div class="chip" style="background:#00365B"></div><div class="tints"><span style="background:#406884"></span><span style="background:#809BAD"></span><span style="background:#C0CCD6"></span></div><div class="meta"><strong>Navy</strong>#00365B · Primary</div></div>
-      <div class="swatch"><div class="chip" style="background:#40A2D8"></div><div class="tints"><span style="background:#70B9E2"></span><span style="background:#A0D0EC"></span><span style="background:#CFE8F6"></span></div><div class="meta"><strong>Sky</strong>#40A2D8 · Core</div></div>
-      <div class="swatch"><div class="chip" style="background:#EDEEEF"></div><div class="tints"><span style="background:#FBFBFB"></span></div><div class="meta"><strong>Gray</strong>#EDEEEF · Core</div></div>
-      <div class="swatch"><div class="chip" style="background:#FE7A36"></div><div class="tints"><span style="background:#FE9C69"></span><span style="background:#FEBC9B"></span><span style="background:#FEDECD"></span></div><div class="meta"><strong>Apricot</strong>#FE7A36 · Accent</div></div>
-      <div class="swatch"><div class="chip" style="background:#4CB963"></div><div class="tints"><span style="background:#79CA8A"></span><span style="background:#A6DCB1"></span><span style="background:#D2EED8"></span></div><div class="meta"><strong>Kelly</strong>#4CB963 · Accent</div></div>
+    <div>
+      <h3>Prohibited</h3>
+      <ul>
+        <li>Stretching, warping, skewing, or slanting</li>
+        <li>Rearranging elements or retyping the wordmark</li>
+        <li>Shadows, glows, outlines, or added elements</li>
+        <li>Any color other than black or white</li>
+        <li>Color logo on a busy or dark photo; use the white version over a dark overlay</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="micro">Type</div>
-    <h2>Typography</h2>
-    <table>
-      <tr><th>Font</th><th>Role</th><th>Free Alternative</th></tr>
-      <tr><td>Gibson Semibold</td><td>Microtitles, CTAs</td><td rowspan="3">Montserrat Extra Light</td></tr>
-      <tr><td>Gibson Light</td><td>Headlines, body copy</td></tr>
-      <tr><td>Gibson Book</td><td>Body copy (legibility boost)</td></tr>
-      <tr><td>Tisa Pro Regular</td><td>Subheadings</td><td>Gentium Book Plus</td></tr>
-      <tr><td>Futura PT Condensed Book</td><td>Dense copy in small spaces</td><td>Barlow Condensed Thin</td></tr>
-    </table>
-  </section>
+<section id="voice">
+  <div class="num">07</div>
+  <div class="micro">Messaging</div>
+  <h2>Voice and Traits</h2>
+  <p class="lede">Write like a warm, confident, real person; not a press release, not a sermon outline. Every asset leans into at least one trait.</p>
+  <table>
+    <tr><th>Trait</th><th>Core Message</th><th>Tagline</th></tr>
+    <tr><td>Generous</td><td>Gratitude expressed through whole-life giving</td><td>"We have so much to be grateful for."</td></tr>
+    <tr><td>Vibrant</td><td>Lively, joy-filled community of spiritual growth</td><td>"Life is full, and so are our hearts."</td></tr>
+    <tr><td>Relational</td><td>Close connections; everyone known and valued</td><td>"Connected hearts, shared journeys."</td></tr>
+    <tr><td>Attentive</td><td>Present every day, not just Sundays</td><td>"Every person, every day."</td></tr>
+    <tr><td>Genuine</td><td>Honest about imperfections; real grace</td><td>"Real stories, real grace."</td></tr>
+  </table>
+  <div class="cols">
+    <div>
+      <h3>Do</h3>
+      <ul>
+        <li>Use "we" and "you"; relational and direct</li>
+        <li>Lead with the human tension before the church answer</li>
+        <li>Be honest about struggle; invite rather than command</li>
+        <li>Reference Jesus and faith naturally</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Don't</h3>
+      <ul>
+        <li>Use insider jargon without context</li>
+        <li>Be preachy, guilt-inducing, or salesy</li>
+        <li>Say "Sunday School"; it is "Life Bible Study"</li>
+        <li>Assume the reader already attends</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="style">
+  <div class="num">08</div>
+  <div class="micro">Copy Rules</div>
+  <h2>Communications Style</h2>
+  <p class="lede">The quick reference. Full rules live in <code>brand-kit.json</code> under <code>communicationsStyle</code>.</p>
+  <table>
+    <tr><th>Rule</th><th>Correct</th><th>Incorrect</th></tr>
+    <tr><td>Church name</td><td>Houston's First · HoustonsFirst.org</td><td>HFBC · Houstons First · hfbc.org</td></tr>
+    <tr><td>Phone</td><td>713.681.8000</td><td>713-681-8000 · (713) 681-8000</td></tr>
+    <tr><td>Email</td><td>Firstname.Lastname@HoustonsFirst.org</td><td>firstname.lastname@houstonsfirst.org</td></tr>
+    <tr><td>Dates</td><td>Mon, June 17 · Wednesdays, Oct 5–26</td><td>June 17th · Every Wednesday</td></tr>
+    <tr><td>Times</td><td>9a · 2:30p · Noon · 9–11a · 8a–10p</td><td>9 a.m. · 9:00 AM · 12p</td></tr>
+    <tr><td>Date and time</td><td>Mon, Nov 28 @ 9a</td><td>Mon, Nov 28@9a · Nov 28 - 9a</td></tr>
+    <tr><td>Divine pronouns</td><td>His · Him · He (for God or Jesus)</td><td>his · him · he</td></tr>
+    <tr><td>Campuses</td><td>The Loop Campus · Cypress Campus</td><td>Main Campus · HFBC Cypress</td></tr>
+  </table>
+</section>
+
+<section id="checklist">
+  <div class="num">09</div>
+  <div class="micro">Before You Ship</div>
+  <h2>Final Checklist</h2>
+  <ol class="plain">
+    <li><span>Logo: correct lockup, black or white only, clearspace respected, unmodified</span></li>
+    <li><span>Colors: core dominates, accent sparing and in season, no unapproved colors</span></li>
+    <li><span>Typography: Gibson and Tisa Pro (or approved alternates), correct hierarchy</span></li>
+    <li><span>Voice: warm, relational, genuine; not preachy or insider-only</span></li>
+    <li><span>Copy: exact church, campus, and ministry name spellings</span></li>
+    <li><span>Dates and times formatted per the style guide</span></li>
+    <li><span>One audience per asset: external families or internal members</span></li>
+    <li><span>At least one brand trait clearly reflected</span></li>
+  </ol>
+</section>
+
 </main>
+
 <footer>
-  Houston's First Baptist Church · <a href="https://www.houstonsfirst.org">HoustonsFirst.org</a> · Maintained by Communications &amp; Web Development
+  <div class="measure">
+    <span>Houston's First Baptist Church · <a href="https://www.houstonsfirst.org">HoustonsFirst.org</a> · 713.681.8000</span>
+    <span>Maintained by Communications and Web Development · <a href="https://github.com/YesuCS/Houstons-First-Brand">Source on GitHub</a></span>
+  </div>
 </footer>
+
 </body>
 </html>
