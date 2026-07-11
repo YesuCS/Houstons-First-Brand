@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Houston's First Brand Kit</title>
+<style>
+  :root{
+    --slate:#1A303A;--navy:#00365B;--sky:#40A2D8;--gray:#EDEEEF;
+    --apricot:#FE7A36;--kelly:#4CB963;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;font-weight:300;color:var(--slate);background:#fff;line-height:1.6}
+  header{background:var(--navy);color:#fff;padding:64px 24px;text-align:center}
+  header h1{font-weight:300;font-size:2.4rem;letter-spacing:.02em}
+  header p{opacity:.8;margin-top:8px}
+  .micro{font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;color:var(--sky)}
+  main{max-width:960px;margin:0 auto;padding:48px 24px}
+  section{margin-bottom:56px}
+  h2{font-weight:300;font-size:1.8rem;color:var(--navy);margin:8px 0 16px}
+  table{width:100%;border-collapse:collapse;margin-top:12px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--gray)}
+  th{font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#53636B}
+  code{background:var(--gray);padding:2px 6px;border-radius:4px;font-size:.9em}
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin-top:16px}
+  .swatch{border:1px solid var(--gray);border-radius:8px;overflow:hidden}
+  .swatch .chip{height:80px}
+  .swatch .meta{padding:10px 12px;font-size:.85rem}
+  .swatch .meta strong{display:block;font-weight:600}
+  .tints{display:flex;height:14px}
+  .tints span{flex:1}
+  a{color:var(--sky);text-decoration:none;font-weight:600}
+  a:hover{text-decoration:underline}
+  .agent{background:var(--gray);border-left:4px solid var(--sky);padding:20px 24px;border-radius:0 8px 8px 0}
+  .agent ol{margin-left:20px;margin-top:8px}
+  footer{background:var(--slate);color:#fff;text-align:center;padding:32px 24px;font-size:.85rem}
+  footer a{color:#A0D0EC}
+</style>
+</head>
+<body>
+<header>
+  <div class="micro">Brand Kit</div>
+  <h1>Houston's First Baptist Church</h1>
+  <p>The single source of truth for our brand; for people and for AI agents.</p>
+</header>
+<main>
+  <section>
+    <div class="micro">For AI Systems</div>
+    <h2>Agent Instructions</h2>
+    <div class="agent">
+      <ol>
+        <li>Start with <a href="brand-kit.json"><code>brand-kit.json</code></a>; it is canonical and machine-readable.</li>
+        <li>Primary color is Navy <code>#00365B</code>; primary typeface is Gibson (free alternative: Montserrat).</li>
+        <li>The logo is black or white only; never recolor it.</li>
+        <li>On the HoustonsFirstV1 web theme, use theme classes; never hard-code hex in markup.</li>
+        <li>Run the <code>checklist</code> array in <code>brand-kit.json</code> before finalizing any asset.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="micro">Downloads</div>
+    <h2>Key Files</h2>
+    <table>
+      <tr><th>File</th><th>Purpose</th></tr>
+      <tr><td><a href="brand-kit.json">brand-kit.json</a></td><td>Machine-readable brand data</td></tr>
+      <tr><td><a href="guidelines.md">guidelines.md</a></td><td>Human-readable brand guidelines</td></tr>
+      <tr><td><a href="assets/logos/">assets/logos/</a></td><td>Logo files (all lockups, black + white)</td></tr>
+      <tr><td><a href="assets/fonts/">assets/fonts/</a></td><td>Font references and free alternatives</td></tr>
+      <tr><td><a href="assets/embellishments/">assets/embellishments/</a></td><td>Approved graphic elements</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <div class="micro">Palette</div>
+    <h2>Brand Colors</h2>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#1A303A"></div><div class="tints"><span style="background:#53636B"></span><span style="background:#8D979D"></span><span style="background:#C6CBCD"></span></div><div class="meta"><strong>Slate</strong>#1A303A · Core</div></div>
+      <div class="swatch"><div class="chip" style="background:#00365B"></div><div class="tints"><span style="background:#406884"></span><span style="background:#809BAD"></span><span style="background:#C0CCD6"></span></div><div class="meta"><strong>Navy</strong>#00365B · Primary</div></div>
+      <div class="swatch"><div class="chip" style="background:#40A2D8"></div><div class="tints"><span style="background:#70B9E2"></span><span style="background:#A0D0EC"></span><span style="background:#CFE8F6"></span></div><div class="meta"><strong>Sky</strong>#40A2D8 · Core</div></div>
+      <div class="swatch"><div class="chip" style="background:#EDEEEF"></div><div class="tints"><span style="background:#FBFBFB"></span></div><div class="meta"><strong>Gray</strong>#EDEEEF · Core</div></div>
+      <div class="swatch"><div class="chip" style="background:#FE7A36"></div><div class="tints"><span style="background:#FE9C69"></span><span style="background:#FEBC9B"></span><span style="background:#FEDECD"></span></div><div class="meta"><strong>Apricot</strong>#FE7A36 · Accent</div></div>
+      <div class="swatch"><div class="chip" style="background:#4CB963"></div><div class="tints"><span style="background:#79CA8A"></span><span style="background:#A6DCB1"></span><span style="background:#D2EED8"></span></div><div class="meta"><strong>Kelly</strong>#4CB963 · Accent</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="micro">Type</div>
+    <h2>Typography</h2>
+    <table>
+      <tr><th>Font</th><th>Role</th><th>Free Alternative</th></tr>
+      <tr><td>Gibson Semibold</td><td>Microtitles, CTAs</td><td rowspan="3">Montserrat Extra Light</td></tr>
+      <tr><td>Gibson Light</td><td>Headlines, body copy</td></tr>
+      <tr><td>Gibson Book</td><td>Body copy (legibility boost)</td></tr>
+      <tr><td>Tisa Pro Regular</td><td>Subheadings</td><td>Gentium Book Plus</td></tr>
+      <tr><td>Futura PT Condensed Book</td><td>Dense copy in small spaces</td><td>Barlow Condensed Thin</td></tr>
+    </table>
+  </section>
+</main>
+<footer>
+  Houston's First Baptist Church · <a href="https://www.houstonsfirst.org">HoustonsFirst.org</a> · Maintained by Communications &amp; Web Development
+</footer>
+</body>
+</html>
