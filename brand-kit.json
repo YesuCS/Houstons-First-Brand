@@ -1,0 +1,140 @@
+{
+  "$schema": "./brand-kit.schema.json",
+  "brand": {
+    "name": "Houston's First Baptist Church",
+    "shortName": "Houston's First",
+    "website": "HoustonsFirst.org",
+    "phone": "713.681.8000",
+    "mission": "The Great Commission; making disciples of all nations (Matthew 28:19-20)",
+    "vision": ["Relevant", "Biblical", "Community"],
+    "strategy": ["Gather (worship)", "Grow (Life Bible Studies & discipleship)", "Give (service)"],
+    "traits": [
+      { "name": "Generous", "coreMessage": "Gratitude expressed through whole-life giving", "tagline": "We have so much to be grateful for." },
+      { "name": "Vibrant", "coreMessage": "Lively, joy-filled community of spiritual growth", "tagline": "Life is full, and so are our hearts." },
+      { "name": "Relational", "coreMessage": "Close connections; everyone known and valued", "tagline": "Connected hearts, shared journeys." },
+      { "name": "Attentive", "coreMessage": "Present every day, not just Sundays", "tagline": "Every person, every day." },
+      { "name": "Genuine", "coreMessage": "Honest about imperfections; real grace", "tagline": "Real stories, real grace." }
+    ]
+  },
+  "colors": {
+    "core": [
+      { "name": "Slate", "hex": "#1A303A", "pms": "7546 C", "usage": "Dark backgrounds, body copy", "tints": { "75": "#53636B", "50": "#8D979D", "25": "#C6CBCD" } },
+      { "name": "Navy", "hex": "#00365B", "pms": "540 C", "usage": "Headlines; primary brand color", "tints": { "75": "#406884", "50": "#809BAD", "25": "#C0CCD6" } },
+      { "name": "Sky", "hex": "#40A2D8", "pms": "298 C", "usage": "Microtitles, calls-to-action, accents", "tints": { "75": "#70B9E2", "50": "#A0D0EC", "25": "#CFE8F6" } },
+      { "name": "Gray", "hex": "#EDEEEF", "pms": "539 C", "usage": "Light backgrounds", "tints": { "25": "#FBFBFB" } }
+    ],
+    "accent": [
+      { "name": "Apricot", "hex": "#FE7A36", "pms": "164 C", "usage": "Seasonal accent, secondary CTA", "tints": { "75": "#FE9C69", "50": "#FEBC9B", "25": "#FEDECD" } },
+      { "name": "Kelly", "hex": "#4CB963", "pms": "7479 C", "usage": "Seasonal accent", "tints": { "75": "#79CA8A", "50": "#A6DCB1", "25": "#D2EED8" } }
+    ],
+    "rules": [
+      "Never apply brand colors to the logo; the logo is black or white only.",
+      "Core colors dominate; accent colors highlight only.",
+      "Web pages on the HoustonsFirstV1 theme must use theme classes (text-{color}, bg-{color}, btn-{color}), never hard-coded hex."
+    ],
+    "seasonal": {
+      "winter": "sky",
+      "spring": "kelly",
+      "summer": "core-only",
+      "fall": "apricot",
+      "note": "REVIEW: an earlier guideline listed apricot as the winter accent and kelly for spring/fall; Communications to confirm the canonical mapping."
+    }
+  },
+  "typography": {
+    "primary": [
+      { "family": "Gibson", "weight": "Semibold", "role": "Microtitles, calls-to-action" },
+      { "family": "Gibson", "weight": "Light", "role": "Headlines, body copy" },
+      { "family": "Gibson", "weight": "Book", "role": "Body copy when legibility needs a boost" },
+      { "family": "Tisa Pro", "weight": "Regular", "role": "Subheadings" }
+    ],
+    "condensed": { "family": "Futura PT Condensed", "weight": "Book", "role": "Large amounts of copy in small spaces" },
+    "freeAlternatives": [
+      { "adobe": "Gibson", "google": "Montserrat Extra Light (200)" },
+      { "adobe": "Tisa Pro", "google": "Gentium Book Plus Regular (400)" },
+      { "adobe": "Futura PT Condensed", "google": "Barlow Condensed Thin (100)" }
+    ],
+    "hierarchy": [
+      { "level": "Microtitle", "spec": "Gibson Semibold, tracked, uppercase" },
+      { "level": "Headline", "spec": "Gibson Light, large" },
+      { "level": "Subheading", "spec": "Tisa Pro Regular" },
+      { "level": "Body", "spec": "Gibson Light (or Book for legibility)" },
+      { "level": "Call to Action", "spec": "Gibson Semibold" }
+    ]
+  },
+  "logo": {
+    "elements": {
+      "logomark": "Cross centered in three concentric circles; represents vision (Relevant, Biblical, Community) and strategy (Gather, Grow, Give)",
+      "logotype": "HOUSTON'S FIRST BAPTIST CHURCH in all caps"
+    },
+    "lockups": [
+      { "name": "Primary (horizontal)", "use": "Default; website headers, most applications" },
+      { "name": "Stacked (vertical)", "use": "Brochures, portrait layouts, compact spaces" },
+      { "name": "Logomark only", "use": "App icons, merchandise, when brand is established on the piece; on print, the full church name must appear somewhere" }
+    ],
+    "colorVariations": ["Black on white/light backgrounds", "White on dark or photo backgrounds (add dark overlay if needed)"],
+    "neverDo": [
+      "Stretch or warp", "Rearrange elements", "Modify the typeface", "Apply effects (shadows, glows, outlines)",
+      "Recolor", "Skew or slant", "Place color logo on busy/dark photo background", "Add extra elements around or on the logo"
+    ],
+    "clearspace": "x = half the height/width of the logomark",
+    "minimumSizes": { "primary": "0.3 in / 7.62 mm tall", "stacked": "0.75 in / 19.05 mm tall" },
+    "files": "assets/logos/"
+  },
+  "campuses": [
+    { "name": "The Loop Campus", "address": "7401 Katy Freeway, Houston, TX 77024" },
+    { "name": "Cypress Campus", "address": "11011 Mason Rd., Cypress, TX 77433" },
+    { "name": "Downtown Campus", "address": "1730 Jefferson Street, Houston, TX 77043" },
+    { "name": "Sienna Campus", "address": "4309 Sienna Parkway, Missouri City, TX 77459" },
+    { "name": "Houston's First en Español", "address": "Loop Campus location" }
+  ],
+  "voice": {
+    "summary": "Write the way a warm, confident, real person talks; not like a press release or a sermon outline.",
+    "do": [
+      "Use we and you; relational and direct",
+      "Lead with the human tension before the church answer",
+      "Be honest about struggle; the brand is Genuine",
+      "Invite; don't command",
+      "Reference Jesus and faith naturally"
+    ],
+    "dont": [
+      "Use insider jargon without context",
+      "Be preachy, guilt-inducing, or salesy",
+      "Say Sunday School; say Life Bible Study instead",
+      "Assume the reader already attends"
+    ]
+  },
+  "communicationsStyle": {
+    "churchName": { "correct": ["Houston's First Baptist Church", "Houston's First", "HoustonsFirst.org"], "incorrect": ["Houstons First", "Houston First", "HFBC", "houstonsfirst.org", "hfbc.org"] },
+    "contact": { "email": "Firstname.Lastname@HoustonsFirst.org", "phone": "713.681.8000 (periods, not dashes or parens)" },
+    "dates": { "rules": ["Abbreviate months except June and July", "Always include day of week for single dates", "No ordinals (17, not 17th)"], "examples": ["Mon, June 17", "Wednesdays, Oct 5–26", "July 7–11"] },
+    "times": { "rules": ["9a / 2:30p format", "Use Noon and Midnight", "Don't repeat a/p within a same-meridiem range (9–11a)", "Include both when crossing noon/midnight (8a–10p)"], "combined": "Mon, Nov 28 @ 9a (spaces around @)" },
+    "divineTerms": { "capitalize": ["His/Him/He for God or Jesus", "Bible", "Word", "Gospel", "Church (Body of Christ)"], "lowercase": ["biblical", "godly", "church (building)"] },
+    "dashes": { "hyphen": "compound words, campus names like Faith Center–Spring Branch", "enDash": "date/time ranges (9–11a, July 7–11)", "emDash": "parenthetical break in a sentence" },
+    "ministryNames": [
+      "Life Bible Study / Life Bible Studies / LBS (after first reference, sparingly)",
+      "First Friends Preschool Ministry / First Friends",
+      "HeartLand",
+      "First Kids Children's Ministry / First Kids",
+      "Kids' Worship",
+      "The HUB Student Ministry / The HUB",
+      "Thru the Roof Special Needs Ministry / Thru the Roof",
+      "Summit Young Single Adults / Summit",
+      "Impact Single Adults / Impact",
+      "Married Young Adult Ministry / MYA",
+      "Single Parent Family Ministry / SPF Ministry",
+      "Band of Brothers Men's Ministry",
+      "Men:Serve",
+      "Legacy 68:5 Adoption, Foster & Orphan Care Ministry / Legacy 68:5"
+    ]
+  },
+  "checklist": [
+    "Logo: correct lockup, black or white only, clearspace respected, not modified",
+    "Colors: core dominate, accent sparing, no unapproved colors",
+    "Typography: Gibson + Tisa Pro or approved alternates, correct hierarchy",
+    "Voice: warm, relational, genuine; not preachy or insider-only",
+    "Copy: correct church, campus, and ministry name spelling",
+    "Dates/Times: formatted per style guide",
+    "Audience: external disconnected families OR internal members, not both at once",
+    "Brand trait: at least one of the five traits reflected"
+  ]
+}
