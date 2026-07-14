@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Houston's First Brand Kit</title>
-<meta name="description" content="The single source of truth for the Houston's First Baptist Church brand; machine-readable for AI agents, browsable for humans.">
+<meta name="description" content="The single source of truth for the Houston's First Baptist Church brand; machine-readable for AI agents, browsable for humans. Colors, typography, logo lockups, ministry logos, voice, and communications style.">
+<meta property="og:title" content="Houston's First Brand Kit">
+<meta property="og:description" content="One source of truth for the Houston's First Baptist Church brand. Structured for AI agents, browsable for people.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Gentium+Book+Plus&family=Barlow+Condensed:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Gentium+Book+Plus:ital@0;1&family=Barlow+Condensed:wght@200&display=swap" rel="stylesheet">
 <style>
   :root{
     --slate:#1A303A;--slate-75:#53636B;--slate-50:#8D979D;--slate-25:#C6CBCD;
@@ -16,29 +19,36 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Montserrat',sans-serif;font-weight:300;color:var(--slate);background:#fff;line-height:1.7;font-size:15px}
+  body{font-family:'Montserrat',sans-serif;font-weight:300;color:var(--slate);background:#fff;line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
   .micro{font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:.7rem;color:var(--sky)}
-  h2{font-weight:200;font-size:2rem;color:var(--navy);margin:10px 0 4px}
-  .lede{font-family:'Gentium Book Plus',serif;color:var(--slate-75);font-size:1.02rem;max-width:640px;margin-bottom:34px}
-  code{background:var(--gray);padding:2px 7px;border-radius:3px;font-size:.86em}
+  h2{font-weight:200;font-size:2rem;color:var(--navy);margin:10px 0 4px;letter-spacing:-.01em}
+  h3{font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--slate)}
+  .lede{font-family:'Gentium Book Plus',serif;color:var(--slate-75);font-size:1.05rem;max-width:640px;margin-bottom:34px}
+  code{background:var(--gray);padding:2px 7px;border-radius:3px;font-size:.86em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
   a{color:var(--navy);text-decoration:underline;text-decoration-color:var(--sky);text-underline-offset:3px}
   a:hover{color:var(--sky)}
 
-  nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--gray);z-index:10;display:flex;gap:26px;align-items:baseline;padding:18px 40px;flex-wrap:wrap}
-  nav .brand{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--navy);margin-right:auto}
-  nav a{font-size:.72rem;font-weight:400;text-transform:uppercase;letter-spacing:.14em;color:var(--slate-75);text-decoration:none}
+  nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--gray);z-index:20;display:flex;gap:22px;align-items:center;padding:15px 40px;flex-wrap:wrap}
+  nav .brand{display:flex;align-items:center;gap:11px;margin-right:auto;font-weight:600;letter-spacing:.13em;text-transform:uppercase;font-size:.72rem;color:var(--navy)}
+  nav .brand img{height:22px;width:auto;display:block}
+  nav a{font-size:.71rem;font-weight:400;text-transform:uppercase;letter-spacing:.13em;color:var(--slate-75);text-decoration:none}
   nav a:hover{color:var(--navy)}
 
-  header{background:var(--navy);color:#fff;padding:110px 40px}
-  .measure{max-width:1000px;margin:0 auto}
-  header h1{font-weight:200;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;margin:18px 0 20px;max-width:720px}
-  header p{color:var(--navy-25);font-family:'Gentium Book Plus',serif;font-size:1.05rem;max-width:540px;margin-bottom:44px}
-  .hero-links{display:flex;gap:36px;flex-wrap:wrap}
-  .hero-links a{color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--sky);padding-bottom:6px}
-  .hero-links a:hover{color:var(--sky-50);border-color:var(--sky-50)}
+  header{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:104px 40px 96px}
+  header::before{content:"";position:absolute;inset:0;background-image:url(assets/web/patterns/pattern-1.png);background-size:560px;opacity:.5;mix-blend-mode:soft-light}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--sky) 0 55%,var(--apricot) 55% 78%,var(--kelly) 78% 100%)}
+  .measure{max-width:1000px;margin:0 auto;position:relative;z-index:1}
+  header .hero-logo{height:auto;width:min(430px,80%);display:block;margin-bottom:34px}
+  header h1{font-weight:200;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.15;margin:0 0 20px;max-width:720px}
+  header p{color:var(--navy-25);font-family:'Gentium Book Plus',serif;font-size:1.08rem;max-width:560px;margin-bottom:42px}
+  .hero-links{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-links a{color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:11px 18px;border-radius:2px;transition:all .15s}
+  .hero-links a:hover{background:var(--sky);border-color:var(--sky);color:var(--navy)}
+  .hero-links a.solid{background:var(--sky);border-color:var(--sky);color:var(--navy)}
+  .hero-links a.solid:hover{background:#fff;border-color:#fff}
 
   main{padding:0 40px}
-  section{max-width:1000px;margin:0 auto;padding:88px 0;border-bottom:1px solid var(--gray)}
+  section{max-width:1000px;margin:0 auto;padding:84px 0;border-bottom:1px solid var(--gray)}
   section:last-of-type{border-bottom:none}
   .num{font-weight:200;font-size:.85rem;color:var(--slate-50);letter-spacing:.1em;margin-bottom:14px}
 
@@ -73,39 +83,88 @@
   .specimen .cond{font-family:'Barlow Condensed',sans-serif;font-weight:200;font-size:1.15rem;color:var(--slate-75);margin-top:18px}
 
   .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;margin-top:26px}
-  .cols h3{font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;color:var(--slate);border-bottom:1px solid var(--slate);padding-bottom:10px;margin-bottom:4px}
+  .cols h3{border-bottom:1px solid var(--slate);padding-bottom:10px;margin-bottom:4px}
   .cols ul{list-style:none}
   .cols li{padding:12px 0;border-bottom:1px solid var(--gray);font-size:.92rem}
 
-  footer{background:var(--slate);color:var(--slate-25);padding:56px 40px;font-size:.82rem;line-height:2}
+  /* Logo lockups */
+  .lockups{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--gray);border:1px solid var(--gray);margin-top:26px}
+  figure.lockup{background:#fff;margin:0;display:flex;flex-direction:column}
+  figure.lockup .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:44px 30px;min-height:170px}
+  figure.lockup.dark .stage{background:var(--navy)}
+  figure.lockup img{max-width:100%;max-height:96px;width:auto;height:auto}
+  figure.lockup.bug img{max-height:120px}
+  figcaption{padding:14px 18px 16px;font-size:.78rem;color:var(--slate-75);border-top:1px solid var(--gray);line-height:1.5}
+  figcaption strong{display:block;font-weight:600;color:var(--slate);font-size:.85rem;letter-spacing:.02em;margin-bottom:2px}
+  .mark-meaning{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;margin-top:34px;padding:30px;background:var(--gray-25);border:1px solid var(--gray)}
+  .mark-meaning img{width:104px;height:104px}
+  .mark-meaning p{font-family:'Gentium Book Plus',serif;color:var(--slate-75);font-size:1rem;max-width:560px}
+  .mark-meaning p em{color:var(--navy);font-style:italic}
+
+  /* Ministry gallery */
+  .cat-title{display:flex;align-items:baseline;gap:14px;margin:44px 0 0}
+  .cat-title h3{white-space:nowrap}
+  .cat-title .rule{flex:1;height:1px;background:var(--gray)}
+  .ministry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:1px;background:var(--gray);border:1px solid var(--gray);margin-top:18px}
+  figure.ministry{background:#fff;margin:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+  figure.ministry .stage{width:100%;display:flex;align-items:center;justify-content:center;padding:26px 22px;min-height:118px}
+  figure.ministry img{max-width:100%;max-height:66px;width:auto;height:auto}
+  figure.ministry figcaption{width:100%;border-top:1px solid var(--gray);padding:11px 10px 13px;font-size:.72rem;color:var(--slate-75);letter-spacing:.02em}
+
+  /* Campuses */
+  .campus-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;background:var(--gray);border:1px solid var(--gray);margin-top:26px}
+  figure.campus{background:#fff;margin:0}
+  figure.campus .stage{display:flex;align-items:center;justify-content:center;padding:34px 24px;min-height:132px}
+  figure.campus img{max-width:100%;max-height:78px;width:auto;height:auto}
+  figure.campus figcaption{border-top:1px solid var(--gray);padding:14px 18px 16px;font-size:.78rem;color:var(--slate-75);line-height:1.5}
+  figure.campus figcaption strong{display:block;font-weight:600;color:var(--slate);font-size:.85rem;margin-bottom:3px}
+
+  /* Embellishments */
+  .pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:26px}
+  figure.pattern{margin:0;border:1px solid var(--gray)}
+  figure.pattern .swatch-img{height:150px;background-size:cover;background-position:center}
+  figure.pattern figcaption{padding:16px 18px 18px;font-size:.82rem;color:var(--slate-75);line-height:1.55}
+  figure.pattern figcaption strong{display:block;font-weight:600;color:var(--slate);font-size:.9rem;margin-bottom:3px}
+
+  footer{position:relative;overflow:hidden;background:var(--slate);color:var(--slate-25);padding:52px 40px;font-size:.82rem;line-height:2}
+  footer::before{content:"";position:absolute;inset:0;background-image:url(assets/web/patterns/pattern-1.png);background-size:520px;opacity:.4;mix-blend-mode:soft-light}
   footer a{color:#fff;text-decoration-color:var(--sky)}
-  footer .measure{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
-  @media (max-width:700px){nav,header,main,footer{padding-left:22px;padding-right:22px}}
+  footer .measure{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:flex-start}
+  footer img{height:30px;width:auto;margin-bottom:14px;display:block}
+
+  @media (max-width:700px){
+    nav,header,main,footer{padding-left:22px;padding-right:22px}
+    nav{gap:14px}
+    .mark-meaning{grid-template-columns:1fr;text-align:center;justify-items:center}
+  }
 </style>
 </head>
 <body>
 
 <nav>
-  <span class="brand">Houston's First Brand Kit</span>
+  <span class="brand"><img src="assets/web/logo-bug-black.svg" alt="">Houston's First Brand Kit</span>
   <a href="#agents">Agents</a>
   <a href="#files">Files</a>
-  <a href="#schema">Schema</a>
   <a href="#colors">Color</a>
   <a href="#type">Type</a>
   <a href="#logo">Logo</a>
+  <a href="#ministries">Ministries</a>
+  <a href="#campuses">Campuses</a>
+  <a href="#patterns">Patterns</a>
   <a href="#voice">Voice</a>
   <a href="#style">Style</a>
-  <a href="#checklist">Checklist</a>
 </nav>
 
 <header>
   <div class="measure">
-    <div class="micro">Brand Kit</div>
-    <h1>Houston's First<br>Baptist Church</h1>
-    <p>One source of truth for our brand. Structured for AI agents, browsable for people, maintained by Communications.</p>
+    <div class="micro" style="color:var(--sky-50)">Brand Kit</div>
+    <img class="hero-logo" src="assets/web/logo-horizontal-white.svg" alt="Houston's First Baptist Church">
+    <h1>One brand, one source of truth.</h1>
+    <p>Every color, typeface, logo lockup, and copy rule for Houston's First Baptist Church; structured for AI agents, browsable for people, maintained by Communications.</p>
     <div class="hero-links">
-      <a href="brand-kit.json">brand-kit.json</a>
+      <a class="solid" href="brand-kit.json">brand-kit.json</a>
       <a href="guidelines.md">Guidelines</a>
+      <a href="#logo">Logo library</a>
       <a href="https://github.com/YesuCS/Houstons-First-Brand">GitHub</a>
       <a href="https://github.com/YesuCS/Houstons-First-Brand/archive/refs/heads/main.zip">Download ZIP</a>
     </div>
@@ -122,7 +181,7 @@
   <ol class="plain">
     <li><span>Load <a href="brand-kit.json"><code>brand-kit.json</code></a>. It is canonical and machine-readable; everything on this page is generated from it.</span></li>
     <li><span>Prioritize Navy <code>#00365B</code> as the primary brand color, Gibson as the primary typeface (free alternative: Montserrat), and the five brand traits: Generous, Vibrant, Relational, Attentive, Genuine.</span></li>
-    <li><span>The logo is black or white only. Never recolor, restyle, or apply effects to it.</span></li>
+    <li><span>The logo is black or white only. Never recolor, restyle, or apply effects to it. Use the correct lockup and campus or ministry variant for the context.</span></li>
     <li><span>On the HoustonsFirstV1 Rock theme, author with theme classes such as <code>text-navy</code>, <code>bg-slate</code>, and <code>btn-sky</code>. Never hard-code hex values in page markup.</span></li>
     <li><span>Format every name, date, and time per the <code>communicationsStyle</code> object: "Mon, June 17 @ 9a", "713.681.8000", never "HFBC".</span></li>
     <li><span>Before finalizing, run every item in the <code>checklist</code> array.</span></li>
@@ -138,32 +197,15 @@
     <tr><th>File</th><th>Purpose</th></tr>
     <tr><td><a href="brand-kit.json">brand-kit.json</a></td><td>Machine-readable brand data; colors, typography, logo rules, voice, communications style, campuses, checklist</td></tr>
     <tr><td><a href="guidelines.md">guidelines.md</a></td><td>Human-readable brand guidelines</td></tr>
-    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos">assets/logos</a></td><td>Logo files; all lockups, black and white, campus variants</td></tr>
-    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/fonts">assets/fonts</a></td><td>Font licensing links and free alternatives</td></tr>
-    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/embellishments">assets/embellishments</a></td><td>Approved decorative and graphic elements</td></tr>
-  </table>
-</section>
-
-<section id="schema">
-  <div class="num">03</div>
-  <div class="micro">Structure</div>
-  <h2>JSON Schema</h2>
-  <p class="lede">Top-level keys in <code>brand-kit.json</code> and what they hold.</p>
-  <table>
-    <tr><th>Key</th><th>Contents</th></tr>
-    <tr><td><code>brand</code></td><td>Name, mission, vision, strategy, and the five brand traits with taglines</td></tr>
-    <tr><td><code>colors</code></td><td>Core and accent palettes with hex, PMS, 75/50/25 tints, usage rules, and the seasonal accent map</td></tr>
-    <tr><td><code>typography</code></td><td>Primary typefaces, roles, free alternatives, and the five-level hierarchy</td></tr>
-    <tr><td><code>logo</code></td><td>Elements, lockups, color variations, prohibited treatments, clearspace, and minimum sizes</td></tr>
-    <tr><td><code>campuses</code></td><td>Official campus names and addresses</td></tr>
-    <tr><td><code>voice</code></td><td>Voice summary with do and don't lists</td></tr>
-    <tr><td><code>communicationsStyle</code></td><td>Church name usage, contact formats, date and time rules, divine terms, dashes, ministry names</td></tr>
-    <tr><td><code>checklist</code></td><td>Final pre-publish verification, one item per rule</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos">assets/logos</a></td><td>Primary logo files; all lockups, black and white, campus and ministry variants</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos/Ministry%20Logos">assets/logos/Ministry Logos</a></td><td>Sub-brand logos for every ministry, in their approved formats</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/fonts">assets/fonts</a></td><td>Font licensing links, the Montserrat family, and free alternatives</td></tr>
+    <tr><td><a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/embellishments">assets/embellishments</a></td><td>Approved decorative patterns and graphic elements</td></tr>
   </table>
 </section>
 
 <section id="colors">
-  <div class="num">04</div>
+  <div class="num">03</div>
   <div class="micro">Palette</div>
   <h2>Color</h2>
   <p class="lede">Core colors carry the brand; accents highlight, matched to season. Each color includes 75, 50, and 25 percent tints.</p>
@@ -184,7 +226,7 @@
 </section>
 
 <section id="type">
-  <div class="num">05</div>
+  <div class="num">04</div>
   <div class="micro">Typography</div>
   <h2>Type System</h2>
   <p class="lede">Gibson leads; Tisa Pro warms the subheadings. This page renders the free Google alternatives.</p>
@@ -205,35 +247,148 @@
 </section>
 
 <section id="logo">
-  <div class="num">06</div>
+  <div class="num">05</div>
   <div class="micro">Identity</div>
   <h2>Logo</h2>
-  <p class="lede">A cross in three concentric circles: Relevant, Biblical, Community, lived out through Gather, Grow, Give. Official files live in <a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos">assets/logos</a>.</p>
+  <p class="lede">The campuswide logo is the default for general communications. Official source files, including vector and print formats, live in <a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos">assets/logos</a>.</p>
+
+  <div class="mark-meaning">
+    <img src="assets/web/logo-bug-black.svg" alt="Houston's First logomark: a cross centered in three concentric circles">
+    <p>The logomark is a <em>cross centered in three concentric circles</em>. The circles carry the vision — <em>Relevant, Biblical, Community</em> — lived out through the strategy: <em>Gather, Grow, Give</em>.</p>
+  </div>
+
+  <div class="cat-title"><h3>Lockups</h3><span class="rule"></span></div>
+  <div class="lockups">
+    <figure class="lockup">
+      <div class="stage"><img src="assets/web/logo-horizontal-black.svg" alt="Houston's First Baptist Church primary horizontal logo, black"></div>
+      <figcaption><strong>Primary · Horizontal</strong>Default for website headers and most applications.</figcaption>
+    </figure>
+    <figure class="lockup">
+      <div class="stage"><img src="assets/web/logo-stacked-black.png" alt="Houston's First Baptist Church stacked logo, black"></div>
+      <figcaption><strong>Stacked · Vertical</strong>Brochures, portrait layouts, and compact spaces.</figcaption>
+    </figure>
+    <figure class="lockup bug">
+      <div class="stage"><img src="assets/web/logo-bug-black.svg" alt="Houston's First logomark only, black"></div>
+      <figcaption><strong>Logomark only</strong>App icons and merchandise. On print, the full church name must appear on the piece.</figcaption>
+    </figure>
+  </div>
+
+  <div class="cat-title"><h3>Color variations</h3><span class="rule"></span></div>
+  <div class="lockups">
+    <figure class="lockup">
+      <div class="stage"><img src="assets/web/logo-horizontal-black.svg" alt="Black logo on a white background"></div>
+      <figcaption><strong>Black</strong>On white and light backgrounds.</figcaption>
+    </figure>
+    <figure class="lockup dark">
+      <div class="stage"><img src="assets/web/logo-horizontal-white.svg" alt="White logo on a navy background"></div>
+      <figcaption><strong>White</strong>On dark, navy, or photo backgrounds; add a dark overlay on busy photos.</figcaption>
+    </figure>
+  </div>
+
   <div class="cols">
     <div>
-      <h3>Lockups</h3>
+      <h3>Lockups &amp; sizing</h3>
       <ul>
-        <li><strong>Primary</strong> (horizontal) is the default for web headers and most applications</li>
-        <li><strong>Stacked</strong> for portrait layouts, brochures, and compact spaces</li>
-        <li><strong>Logomark only</strong> for app icons and merchandise; on print, the full church name must appear on the piece</li>
+        <li>Primary (horizontal) is the default for web headers and most applications</li>
+        <li>Stacked suits portrait layouts, brochures, and compact spaces</li>
+        <li>Logomark only for app icons and merchandise; on print, the full church name must appear on the piece</li>
         <li>Clearspace equals half the logomark's height on all sides; minimum sizes are 0.3 in (primary) and 0.75 in (stacked)</li>
       </ul>
     </div>
     <div>
-      <h3>Prohibited</h3>
+      <h3>Never do</h3>
       <ul>
-        <li>Stretching, warping, skewing, or slanting</li>
-        <li>Rearranging elements or retyping the wordmark</li>
-        <li>Shadows, glows, outlines, or added elements</li>
-        <li>Any color other than black or white</li>
-        <li>Color logo on a busy or dark photo; use the white version over a dark overlay</li>
+        <li>Stretch, warp, skew, or slant</li>
+        <li>Rearrange elements or retype the wordmark</li>
+        <li>Apply shadows, glows, outlines, or added elements</li>
+        <li>Use any color other than black or white</li>
+        <li>Place the color logo on a busy or dark photo; use the white version over a dark overlay</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section id="voice">
+<section id="ministries">
+  <div class="num">06</div>
+  <div class="micro">Sub-brands</div>
+  <h2>Ministry Logos</h2>
+  <p class="lede">Each ministry carries its own approved logo within the Houston's First family. Use the campuswide logo for general communications and a ministry logo only for that ministry's content. Full format sets live in <a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/logos/Ministry%20Logos">assets/logos/Ministry Logos</a>.</p>
+
+  <div class="cat-title"><h3>Next Generation</h3><span class="rule"></span></div>
+  <div class="ministry-grid">
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/first-friends.png" alt="First Friends Preschool Ministry logo"></div><figcaption>First Friends</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/first-kids.png" alt="First Kids Children's Ministry logo"></div><figcaption>First Kids</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/nextgen.png" alt="NextGen ministry logo"></div><figcaption>NextGen</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/wired.png" alt="Wired student ministry logo"></div><figcaption>Wired</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/seven7.png" alt="Seven7 student ministry logo"></div><figcaption>Seven7</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/elevate.png" alt="Elevate Student Worship logo"></div><figcaption>Elevate</figcaption></figure>
+  </div>
+
+  <div class="cat-title"><h3>Worship</h3><span class="rule"></span></div>
+  <div class="ministry-grid">
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/worship-academy.png" alt="Houston's First Worship Academy logo"></div><figcaption>Worship Academy</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/orchestra.png" alt="Houston's First Worship Orchestra logo"></div><figcaption>Worship Orchestra</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/pops-and-praise.png" alt="Pops &amp; Praise logo"></div><figcaption>Pops &amp; Praise</figcaption></figure>
+  </div>
+
+  <div class="cat-title"><h3>Missions &amp; Outreach</h3><span class="rule"></span></div>
+  <div class="ministry-grid">
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/go-houston.png" alt="GO Houston missions logo"></div><figcaption>GO Houston</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/go-medical.png" alt="GO Medical Missions logo"></div><figcaption>GO Medical Missions</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/all-nations-esl.png" alt="All Nations ESL logo"></div><figcaption>All Nations ESL</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/legacy-685.png" alt="Legacy 68:5 Adoption, Foster and Orphan Care Ministry logo"></div><figcaption>Legacy 68:5</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/the-oaks.png" alt="The Oaks logo"></div><figcaption>The Oaks</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/harvest.png" alt="Harvest ministry logo"></div><figcaption>Harvest</figcaption></figure>
+  </div>
+
+  <div class="cat-title"><h3>Adults &amp; Groups</h3><span class="rule"></span></div>
+  <div class="ministry-grid">
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/band-of-brothers.png" alt="Band of Brothers Men's Ministry logo"></div><figcaption>Band of Brothers</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/men-serve.png" alt="Men:Serve logo"></div><figcaption>Men:Serve</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/womens.png" alt="Women's Ministry logo"></div><figcaption>Women's Ministry</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/college.png" alt="CY College Ministry logo"></div><figcaption>College Ministry</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/cyp.png" alt="CYP young single adults logo"></div><figcaption>CYP</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/the4.png" alt="The4 logo"></div><figcaption>The4</figcaption></figure>
+  </div>
+
+  <div class="cat-title"><h3>Care &amp; Church-wide</h3><span class="rule"></span></div>
+  <div class="ministry-grid">
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/thru-the-roof.png" alt="Thru the Roof Special Needs Ministry logo"></div><figcaption>Thru the Roof</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/stewardship.png" alt="Stewardship Ministry logo"></div><figcaption>Stewardship</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/difference-makers.png" alt="Difference Makers Institute logo"></div><figcaption>Difference Makers</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/pathmakers.png" alt="Pathmakers logo"></div><figcaption>Pathmakers</figcaption></figure>
+    <figure class="ministry"><div class="stage"><img src="assets/web/ministries/lawn-at-the-loop.png" alt="Lawn at the Loop logo"></div><figcaption>Lawn at the Loop</figcaption></figure>
+  </div>
+</section>
+
+<section id="campuses">
   <div class="num">07</div>
+  <div class="micro">Locations</div>
+  <h2>Campuses</h2>
+  <p class="lede">Use the campuswide logo for general communications; a campus-specific logo only for campus-targeted content. Exact campus names are canonical — never "Main Campus" or "HFBC Cypress".</p>
+  <div class="campus-grid">
+    <figure class="campus"><div class="stage"><img src="assets/web/campuses/loop.svg" alt="The Loop Campus logo"></div><figcaption><strong>The Loop Campus</strong>7401 Katy Freeway<br>Houston, TX 77024</figcaption></figure>
+    <figure class="campus"><div class="stage"><img src="assets/web/campuses/cypress.svg" alt="Cypress Campus logo"></div><figcaption><strong>Cypress Campus</strong>11011 Mason Rd.<br>Cypress, TX 77433</figcaption></figure>
+    <figure class="campus"><div class="stage"><img src="assets/web/campuses/downtown.svg" alt="Downtown Campus logo"></div><figcaption><strong>Downtown Campus</strong>1730 Jefferson Street<br>Houston, TX 77043</figcaption></figure>
+    <figure class="campus"><div class="stage"><img src="assets/web/campuses/sienna.svg" alt="Sienna Campus logo"></div><figcaption><strong>Sienna Campus</strong>4309 Sienna Parkway<br>Missouri City, TX 77459</figcaption></figure>
+    <figure class="campus"><div class="stage"><img src="assets/web/campuses/espanol.png" alt="Houston's First en Español logo"></div><figcaption><strong>Houston's First en Español</strong>Loop Campus location</figcaption></figure>
+  </div>
+</section>
+
+<section id="patterns">
+  <div class="num">08</div>
+  <div class="micro">Embellishments</div>
+  <h2>Patterns &amp; Texture</h2>
+  <p class="lede">Approved woven and textured patterns add depth to backgrounds. Keep them subtle and behind content, never competing with the logo or headlines. Source files live in <a href="https://github.com/YesuCS/Houstons-First-Brand/tree/main/assets/embellishments">assets/embellishments</a>.</p>
+  <div class="pattern-grid">
+    <figure class="pattern"><div class="swatch-img" style="background-image:url(assets/web/patterns/pattern-1.png)"></div><figcaption><strong>Woven · Dark</strong>Subtle texture for Navy and Slate backgrounds. Used behind this page's header and footer.</figcaption></figure>
+    <figure class="pattern"><div class="swatch-img" style="background-image:url(assets/web/patterns/pattern-2.png)"></div><figcaption><strong>Woven · Light</strong>Subtle texture for white and Gray backgrounds and light sections.</figcaption></figure>
+    <figure class="pattern"><div class="swatch-img" style="background-image:url(assets/web/patterns/pattern-3.png)"></div><figcaption><strong>Textured · Apricot</strong>Seasonal accent texture. Use sparingly, in season, never under body copy.</figcaption></figure>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="num">09</div>
   <div class="micro">Messaging</div>
   <h2>Voice and Traits</h2>
   <p class="lede">Write like a warm, confident, real person; not a press release, not a sermon outline. Every asset leans into at least one trait.</p>
@@ -268,7 +423,7 @@
 </section>
 
 <section id="style">
-  <div class="num">08</div>
+  <div class="num">10</div>
   <div class="micro">Copy Rules</div>
   <h2>Communications Style</h2>
   <p class="lede">The quick reference. Full rules live in <code>brand-kit.json</code> under <code>communicationsStyle</code>.</p>
@@ -286,7 +441,7 @@
 </section>
 
 <section id="checklist">
-  <div class="num">09</div>
+  <div class="num">11</div>
   <div class="micro">Before You Ship</div>
   <h2>Final Checklist</h2>
   <ol class="plain">
@@ -305,7 +460,10 @@
 
 <footer>
   <div class="measure">
-    <span>Houston's First Baptist Church · <a href="https://www.houstonsfirst.org">HoustonsFirst.org</a> · 713.681.8000</span>
+    <div>
+      <img src="assets/web/logo-horizontal-white.svg" alt="Houston's First Baptist Church">
+      <span>Houston's First Baptist Church · <a href="https://www.houstonsfirst.org">HoustonsFirst.org</a> · 713.681.8000</span>
+    </div>
     <span>Maintained by Communications and Development Team · <a href="https://github.com/YesuCS/Houstons-First-Brand">Source on GitHub</a></span>
   </div>
 </footer>
