@@ -30,4 +30,4 @@ Clone this repo or download the ZIP from the repository page for the complete ki
 
 ## Ownership
 
-Content owner: Houston's First Communications. Technical owner: Web/Rock Development. Update `brand-kit.json` first; regenerate `guidelines.md` and the site from it.
+Content owner: Houston's First. Technical owner: Development Team. Update `brand-kit.json` first; regenerate `guidelines.md` and the site from it.
